@@ -30,7 +30,7 @@
                             <input type="text" class="form-control" placeholder="Username" name="username" >
                             <input type="password" class="form-control" placeholder="Username" name="psw" >
                             <button class="btn btn-primary" type="submit">Login</button>
-                            <a class="btn btn-link" href="{% url 'onlinecourse:registration' %}">Sign Up</a>
+                            <a class="btn btn-link" href="{% url 'onlinecourse:registration' %}">Sign up</a>
                         </div>
                     </form>
                 </li>
@@ -42,7 +42,7 @@
     <!-- Page content -->
     <div class="container-fluid">
             <h2>{{ course.name }}</h2>
-            <div class="card-columns-vertical">
+            <div class="card-columns-vertical" class="colla">
                 {% for lesson in course.lesson_set.all %}
                     <div class="card mt-1">
                         <div class="card-header"><h5>Lesson {{lesson.order|add:1}}: {{lesson.title}}</h5></div>
